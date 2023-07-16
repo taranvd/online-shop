@@ -1,0 +1,32 @@
+.shop-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+
+  &__link {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.cart {
+  height: auto;
+  width: auto;
+
+  .shop-nav__quantity {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 25px;
+    height: 16px;
+    padding: 0 5px;
+    font-weight: 700;
+    font-size: 10px;
+
+    background-color: var(--color-dark);
+    color: var(--light-color);
+  }
+}
+
+.search-form {
+}

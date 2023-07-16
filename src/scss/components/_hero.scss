@@ -1,0 +1,49 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  background-color: var(--quill-gray);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba($color: #000000, $alpha: 0.05);
+  }
+
+  &__container {
+    position: relative;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 72px;
+    font-weight: 700;
+    max-width: 550px;
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    max-height: 80%;
+  }
+}

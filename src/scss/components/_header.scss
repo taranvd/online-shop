@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__container {
+    padding: 36px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__shop-nav {
+    margin-left: 250px;
+  }
+
+  &__logo {
+    font-size: 1.3rem;
+  }
+}

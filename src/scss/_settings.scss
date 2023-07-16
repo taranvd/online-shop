@@ -10,7 +10,7 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -19,6 +19,9 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  font-weight: 500;
+  background-color: var(--light-color);
+  color: var(--color-dark);
 }
 
 img {
@@ -29,6 +32,13 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .site-container {
