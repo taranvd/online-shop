@@ -1,1 +1,1 @@
-console.log('components');
+import "./components/main-slider.js";

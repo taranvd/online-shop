@@ -3,7 +3,7 @@
 :root {
   // base
   --font-family: "Jost", sans-serif;
-  --content-width: 1170px;
+  --content-width: 1370px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -11,4 +11,5 @@
   --light-color: #fff;
   --color-dark: #151515;
   --quill-gray: #e5e5e3;
+  --grey-color: #858585;
 }
