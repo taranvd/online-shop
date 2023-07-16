@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Замените "main" на название вашей основной ветки (например, "master")
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18 # Замените на версию Node.js, которая используется в вашем проекте
+
+      - name: Install dependencies
+        run: npm install # Или yarn install, если используете Yarn
+
+      - name: Build project
+        run: gulp build # Замените на команду, которая собирает ваш проект (например, gulp build)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./app # Замените "./app" на путь к папке сборки вашего проекта
+          github_token: ${{ secrets.GITHUB_TOKEN }}
