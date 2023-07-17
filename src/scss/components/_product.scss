@@ -36,8 +36,12 @@
 .products-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 80px;
 
   &__item {
-    margin-right: 30px;
+    flex-basis: calc(20% - 30px);
   }
 }

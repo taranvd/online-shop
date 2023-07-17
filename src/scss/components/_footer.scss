@@ -1,0 +1,151 @@
+.footer {
+  &__content {
+    padding: 100px 260px;
+    padding-bottom: 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 95px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    &--row {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__item {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    color: var(--tundora-color);
+
+    &--row {
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--tundora-color);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding: 40px 0;
+  }
+
+  &__social {
+    margin-right: 8px;
+  }
+}
+
+.subscribe-form {
+  position: relative;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--tundora-color);
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 13px;
+    color: var(--color-dark);
+  }
+
+  &__field {
+    display: block;
+    border-bottom: 2px solid var(--color-dark);
+    width: 100%;
+
+    input {
+      padding-right: 80px;
+      padding-bottom: 10px;
+      width: 100%;
+      border: none;
+      font-size: 13px;
+      color: var(--color-dark);
+
+      &::placeholder {
+        color: rgba($color: var(--tundora-color), $alpha: 0.5);
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--tw {
+      background-image: url("../img/tw.png");
+    }
+    &--fb {
+      background-image: url("../img/fb.png");
+    }
+    &--in {
+      background-image: url("../img/in.png");
+    }
+    &--pin {
+      background-image: url("../img/pin.png");
+    }
+  }
+}

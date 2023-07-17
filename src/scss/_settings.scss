@@ -119,6 +119,7 @@ ul {
 .main-link {
   position: relative;
   font-size: 1rem;
+  color: var(--color-dark);
 
   &::before {
     content: "";
@@ -127,9 +128,13 @@ ul {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: var(--color-dark);
+    background-color: currentColor;
 
     transition: width 0.33s;
+  }
+
+  &--white {
+    color: var(--light-color);
   }
 
   &:hover {
