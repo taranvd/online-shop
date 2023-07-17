@@ -1,0 +1,41 @@
+.banners {
+  &__container {
+    padding: 30px 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.6%;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 30%;
+  }
+}
+
+.banners-article {
+  padding: 54px 35% 54px 60px;
+  min-height: 290px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e9e4df;
+
+  &-midseason {
+    background-image: url(../img/midseason.jpg);
+  }
+  &-summer {
+    background-image: url(../img/summer.jpg);
+  }
+  &-accs {
+    background-image: url(../img/accs.jpg);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+}

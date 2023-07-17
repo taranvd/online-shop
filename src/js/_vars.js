@@ -4,4 +4,5 @@ export default {
   htmlEl: document.documentElement,
   bodyEl: document.body,
   bannerSlider: document.querySelector(".banner-slider"),
+  marketing: document.querySelector(".marketing"),
 };
