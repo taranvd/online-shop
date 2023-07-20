@@ -14,15 +14,18 @@
           <h2 class="visually-hidden">Catalog</h2>
 
           @include('partials/breadcrumbs.html')
+
           <div class="catalog-content">
-            @include('partials/catalog-filter.html')
-            @include('partials/catalog-grid.html')
+            <div class="container container-narrow">
+              @include('partials/catalog-filter.html')
+              @include('partials/catalog-grid.html')
+            </div>
           </div>
         </section>
       </main>
 
+      <!-- Footer -->
       @include('partials/footer.html')
-      <!-- @include('html/h1.html') пример include -->
     </div>
   </body>
 </html>

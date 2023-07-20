@@ -13,17 +13,17 @@
 .cart {
   height: auto;
   width: auto;
+}
 
-  .shop-nav__quantity {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 25px;
-    height: 16px;
-    padding: 0 5px;
-    font-weight: 700;
-    font-size: 10px;
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 25px;
+  height: 16px;
+  padding: 0 5px;
+  font-weight: 700;
+  font-size: 10px;
 
-    background-color: var(--color-dark);
-    color: var(--light-color);
-  }
+  background-color: var(--color-dark);
+  color: var(--light-color);
 }

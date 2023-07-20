@@ -1,0 +1,37 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+
+    padding-top: 37px;
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        position: absolute;
+
+        right: -20px;
+        top: 50%;
+        color: var(--grey-color);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__link {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--grey-color);
+
+    &--current {
+      color: var(--dark-color);
+    }
+  }
+}
