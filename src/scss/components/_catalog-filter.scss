@@ -5,7 +5,7 @@
 }
 
 .catalog-content {
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .hide-filters {
@@ -26,8 +26,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 34px;
     padding-bottom: 34px;
+
+    cursor: pointer;
+    user-select: none;
   }
 
   &__caption {
@@ -48,6 +51,11 @@
     min-width: 16px;
 
     transform: translateY(-1px);
+  }
+
+  &__bottom {
+    display: none;
+    padding-bottom: 30px;
   }
 
   &__toggle {
@@ -80,6 +88,33 @@
       transform: translateY(-50%);
     }
   }
+
+  &__items {
+    columns: 2;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+    &:nth-child(5n) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--open {
+    .catalog-filter__bottom {
+      display: block;
+    }
+
+    .catalog-filter__toggle {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #eee;
+  }
 }
 
 .custom-checkbox {
@@ -102,14 +137,6 @@
       width: 11px;
       height: 11px;
     }
-
-    &::after {
-      content: "\2713";
-      position: absolute;
-
-      left: 2px;
-      top: 0;
-    }
   }
 
   &__input {
@@ -118,6 +145,14 @@
 
       &::before {
         border-color: var(--color-dark);
+      }
+
+      &::after {
+        content: "\2713";
+        position: absolute;
+
+        left: 2px;
+        top: 0;
       }
     }
   }
