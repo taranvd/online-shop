@@ -10,6 +10,7 @@ _vars.catalogFiltersTop.forEach((el) => {
 
 _vars.hideFilters.addEventListener("click", () => {
   _vars.catalogFiltersTop.forEach((el) => {
-    el.classList.remove("catalog-filter--open");
+    console.log(el);
+    el.closest(".catalog-filter").classList.remove("catalog-filter--open");
   });
 });

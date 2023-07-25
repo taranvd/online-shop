@@ -1,4 +1,5 @@
 .catalog-filters {
+  margin-right: 30px;
   padding-top: 30px;
   padding-right: 66px;
   width: 309px;
@@ -6,6 +7,10 @@
 
 .catalog-content {
   min-height: 600px;
+
+  .container {
+    display: flex;
+  }
 }
 
 .hide-filters {
@@ -154,6 +159,147 @@
         left: 2px;
         top: 0;
       }
+    }
+  }
+}
+
+.catalog-grid {
+  padding-top: 30px;
+  width: 987px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    outline: 1px solid red;
+  }
+
+  &__item {
+    margin-bottom: 79px;
+  }
+}
+
+[data-grid-columns="3"] {
+  .catalog-grid__item {
+    width: 31.3%;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 3%;
+    }
+  }
+}
+
+[data-grid-columns="4"] {
+  .catalog-grid__item {
+    width: 22.7%;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 3%;
+    }
+  }
+}
+
+[data-grid-columns="5"] {
+  .catalog-grid__item {
+    width: 17.6%;
+
+    &:not(:nth-child(5n)) {
+      margin-right: 3%;
+    }
+  }
+}
+
+.catalog-props {
+  margin-bottom: 20px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+}
+
+.catalog-columns {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  &__text {
+    margin-right: 3px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn {
+    padding: 0 5px;
+    font-size: 10px;
+    color: var(--grey-color);
+
+    &:hover {
+      color: var(--color-dark);
+    }
+
+    &--current {
+      color: var(--color-dark);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.catalog-choice {
+  display: none;
+  font-size: 0;
+  &__item {
+    margin-right: 5px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    background-color: #eee;
+    color: var(--tundora-color);
+    transition: background-color 0.3s, color 0.3s;
+
+    svg {
+      margin-left: 5px;
+      height: 9px;
+      width: 8px;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--light-color);
+      background-color: var(--color-dark);
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+
+  &__clear {
+    position: relative;
+    font-weight: 500;
+    font-size: 13px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+
+      transition: width 0.33s;
     }
   }
 }
