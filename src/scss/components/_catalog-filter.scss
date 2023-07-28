@@ -263,6 +263,7 @@
   display: none;
   font-size: 0;
   &__item {
+    margin-bottom: 5px;
     margin-right: 5px;
     padding: 5px 12px;
     border-radius: 12px;
@@ -276,6 +277,7 @@
       height: 9px;
       width: 8px;
       fill: currentColor;
+      pointer-events: none;
     }
 
     &:hover {
