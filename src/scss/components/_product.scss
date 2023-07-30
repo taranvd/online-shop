@@ -23,13 +23,47 @@
     font-size: 13px;
   }
 
+  &__oldprice {
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #959595;
+    text-decoration: line-through;
+  }
+
   &__image {
+    position: relative;
     margin-bottom: 20px;
 
     img {
       max-height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__sale {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border: 2px solid var(--color-dark);
+    padding: 3px 10px;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  &__prop {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #111;
+
+    background-position: left center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -43,5 +77,58 @@
 
   &__item {
     flex-basis: calc(20% - 30px);
+  }
+}
+
+.new {
+  background-image: url(../img/new.png);
+}
+
+.best {
+  background-image: url(../img/best.png);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 40px;
+    border: 2px solid #eee;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--grey-color);
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+    svg {
+      margin-left: 3px;
+      width: 7px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    &:hover {
+      border: 2px solid var(--color-dark);
+      color: var(--light-color);
+      background-color: var(--color-dark);
+      transition: color 0.3s, background-color 0.3s, border 0.3s;
+    }
+
+    &--current {
+      border: 2px solid var(--color-dark);
+      color: var(--light-color);
+      background-color: var(--color-dark);
+    }
   }
 }
