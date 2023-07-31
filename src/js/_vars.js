@@ -14,4 +14,7 @@ export default {
   catalogChoise: document.querySelector(".catalog-choice"),
   customSelect: document.querySelectorAll(".custom-select"),
   freeDeliveryBtn: document.querySelector(".free-delivery__btn"),
+  colorSelectSelected: document.querySelector(".color-select__selected"),
+  colorSelect: document.querySelector(".color-select"),
+  sizeSelect: document.querySelector(".size-select"),
 };

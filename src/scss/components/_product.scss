@@ -54,16 +54,7 @@
   }
 
   &__prop {
-    display: inline-block;
     margin-bottom: 10px;
-    padding-left: 16px;
-    font-weight: 700;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #111;
-
-    background-position: left center;
-    background-repeat: no-repeat;
   }
 }
 
@@ -78,6 +69,18 @@
   &__item {
     flex-basis: calc(20% - 30px);
   }
+}
+
+.product-prop {
+  display: inline-block;
+  padding-left: 16px;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #111;
+
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .new {
