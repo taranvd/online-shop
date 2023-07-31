@@ -35,3 +35,43 @@
     }
   }
 }
+
+.breadcrumbs .card-prev,
+.breadcrumbs .card-next {
+  display: none;
+}
+
+.card {
+  .breadcrumbs .card-prev,
+  .breadcrumbs .card-next {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--grey-color);
+
+    transition: color 0.3s;
+
+    &:hover {
+      transition: color 0.3s;
+      color: var(--dark-color);
+    }
+  }
+
+  .breadcrumbs__list {
+    border-bottom: none;
+  }
+
+  .breadcrumbs .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-prev {
+    margin-left: auto;
+  }
+
+  .card-next {
+    margin-left: 20px;
+  }
+}

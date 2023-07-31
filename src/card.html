@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="card-page page__body">
+    <div class="site-container">
+      @include('partials/header-catalog.html')
+
+      <!-- main -->
+      <main class="main">
+        <section class="card">
+          <h2 class="visually-hidden">Product Card</h2>
+          @include('partials/breadcrumbs.html')
+
+          <div class="card-content">
+            <div class="card-content__top">
+              @include('partials/card-top.html')
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      @include('partials/footer-2.html')
+    </div>
+  </body>
+</html>

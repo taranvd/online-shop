@@ -383,4 +383,17 @@
       display: block;
     }
   }
+
+  &--footer {
+    min-width: auto;
+    .custom-select__top {
+      border-bottom: none;
+      padding-right: 15px;
+      padding-bottom: 0;
+
+      &::after {
+        margin-top: 0;
+      }
+    }
+  }
 }

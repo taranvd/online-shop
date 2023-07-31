@@ -13,4 +13,5 @@ export default {
   catalogFilterItems: document.querySelectorAll(".catalog-filter__item"),
   catalogChoise: document.querySelector(".catalog-choice"),
   customSelect: document.querySelectorAll(".custom-select"),
+  freeDeliveryBtn: document.querySelector(".free-delivery__btn"),
 };
