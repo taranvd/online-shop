@@ -20,4 +20,6 @@ export default {
   stepper: document.querySelector(".stepper"),
   cardSliderThumbs: document.querySelector(".card-slider__thumbs"),
   sliderImg: document.querySelector(".card-slider__main img"),
+  cardDescLink: document.querySelectorAll(".card-desc__link"),
+  cardRelatedSlider: document.querySelector(".card-related__slider"),
 };

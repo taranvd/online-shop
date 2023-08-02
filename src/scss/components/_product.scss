@@ -31,6 +31,37 @@
     text-decoration: line-through;
   }
 
+  &:hover {
+    .product-custom__price {
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+
+    .to-cart {
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .product-custom__cart {
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+  }
+
+  .product-custom {
+    overflow: hidden;
+    height: 18px;
+
+    &__price {
+      transition: transform 0.3s;
+    }
+
+    &__cart {
+      transition: transform 0.3s;
+    }
+  }
+
   &__image {
     position: relative;
     margin-bottom: 20px;

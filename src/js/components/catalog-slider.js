@@ -8,3 +8,14 @@ const catalogSlider = new Swiper(vars.catalogSlider, {
     prevEl: ".hero-prev-btn",
   },
 });
+
+const relatedSlider = new Swiper(vars.cardRelatedSlider, {
+  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  pagination: {
+    el: ".related-pag",
+    type: "bullets",
+    clickable: true,
+  },
+});
