@@ -51,17 +51,32 @@
     display: inline-block;
     padding: 15px 45px;
     font-size: 13px;
+    transition: all 0.3s;
 
     &--dark {
       border: 1px solid var(--color-dark);
       color: var(--light-color);
       background-color: var(--color-dark);
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid var(--color-dark);
+        color: var(--color-dark);
+        background-color: transparent;
+        transition: all 0.3s;
+      }
     }
 
     &--light {
       border: 1px solid var(--color-dark);
       color: var(--color-dark);
       background-color: transparent;
+      &:hover {
+        border: 1px solid var(--color-dark);
+        color: var(--light-color);
+        background-color: var(--color-dark);
+        transition: all 0.3s;
+      }
     }
   }
 }

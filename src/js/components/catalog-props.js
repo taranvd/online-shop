@@ -6,10 +6,7 @@ if (document.querySelector(".catalog")) {
   });
 
   _vars.catalogColumns.addEventListener("click", (e) => {
-    if (
-      e.target.classList.contains(".catalog-columns__btn") ||
-      e.target.closest(".catalog-columns__item")
-    ) {
+    if (e.target.classList.contains(".catalog-columns__btn") || e.target.closest(".catalog-columns__item")) {
       let columns = e.target.dataset.columns;
       let columnsBtn = document.querySelectorAll(".catalog-columns__btn");
 
@@ -22,7 +19,9 @@ if (document.querySelector(".catalog")) {
       _vars.catalogGridContent.dataset.gridColumns = columns;
     }
   });
+}
 
+if (_vars.customSelect) {
   _vars.customSelect.forEach((el) => {
     el.addEventListener("click", (e) => {
       e.currentTarget.classList.toggle("custom-select--open");
@@ -34,12 +33,12 @@ if (document.querySelector(".catalog")) {
       }
     });
 
-    el.addEventListener("focus", (e) => {
-      e.currentTarget.classList.add("custom-select--open");
-    });
+    // el.addEventListener("focus", (e) => {
+    //   e.currentTarget.classList.add("custom-select--open");
+    // });
 
-    el.addEventListener("blur", (e) => {
-      e.currentTarget.classList.remove("custom-select--open");
-    });
+    // el.addEventListener("blur", (e) => {
+    //   e.currentTarget.classList.remove("custom-select--open");
+    // });
   });
 }

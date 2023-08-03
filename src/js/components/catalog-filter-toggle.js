@@ -3,9 +3,7 @@ import _vars from "../_vars";
 if (document.querySelector(".catalog")) {
   _vars.catalogFiltersTop.forEach((el) => {
     el.addEventListener("click", (e) => {
-      e.currentTarget
-        .closest(".catalog-filter")
-        .classList.toggle("catalog-filter--open");
+      e.currentTarget.closest(".catalog-filter").classList.toggle("catalog-filter--open");
     });
   });
 
@@ -30,28 +28,23 @@ if (document.querySelector(".catalog")) {
       let checked = el.querySelector("input").checked;
 
       if (checked) {
-        el.querySelector(".custom-checkbox").classList.add(
-          "custom-checkbox--active"
-        );
+        el.querySelector(".custom-checkbox").classList.add("custom-checkbox--active");
         let text = el.querySelector(".custom-checkbox__text").textContent;
 
-        _vars.catalogChoise.insertAdjacentHTML(
-          "afterbegin",
-          createChoiceItem(text)
-        );
+        _vars.catalogChoise.insertAdjacentHTML("afterbegin", createChoiceItem(text));
       } else {
-        el.querySelector(".custom-checkbox").classList.remove(
-          "custom-checkbox--active"
-        );
+        el.querySelector(".custom-checkbox").classList.remove("custom-checkbox--active");
 
         let text = el.querySelector(".custom-checkbox").dataset.text;
 
         document.querySelector(`[data-choice-text='${text}']`).remove();
       }
 
-      let activeCheckboxes = document.querySelectorAll(
-        ".custom-checkbox--active"
-      );
+      el.closest(".catalog-filter").querySelector(".catalog-filter__quantity").textContent = el
+        .closest(".catalog-filter__items")
+        .querySelectorAll(".custom-checkbox--active").length;
+
+      let activeCheckboxes = document.querySelectorAll(".custom-checkbox--active");
 
       if (activeCheckboxes.length > 0) {
         _vars.catalogChoise.style.display = "block";
@@ -69,13 +62,9 @@ if (document.querySelector(".catalog")) {
 
       console.log(text);
 
-      document
-        .querySelector(`[data-text='${text}']`)
-        .querySelector("input").checked = false;
+      document.querySelector(`[data-text='${text}']`).querySelector("input").checked = false;
 
-      document
-        .querySelector(`[data-text='${text}']`)
-        .classList.remove("custom-checkbox--active");
+      document.querySelector(`[data-text='${text}']`).classList.remove("custom-checkbox--active");
     }
 
     if (e.target.classList.contains("catalog-choice__clear")) {
@@ -84,11 +73,11 @@ if (document.querySelector(".catalog")) {
           el.remove();
         }
 
+        document.querySelectorAll(".catalog-filter__quantity").forEach((el) => (el.textContent = 0));
+
         _vars.catalogFilterItems.forEach((el) => {
           el.querySelector("input").checked = false;
-          el.querySelector(".custom-checkbox").classList.remove(
-            "custom-checkbox--active"
-          );
+          el.querySelector(".custom-checkbox").classList.remove("custom-checkbox--active");
         });
       });
 

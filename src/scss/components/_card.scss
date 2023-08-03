@@ -383,6 +383,12 @@
     font-weight: 700;
     font-size: 15px;
     color: var(--grey-color);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-dark);
+      transition: color 0.3s;
+    }
 
     &--active {
       color: var(--color-dark);
