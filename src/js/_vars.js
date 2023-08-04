@@ -22,4 +22,7 @@ export default {
   sliderImg: document.querySelector(".card-slider__main img"),
   cardDescLink: document.querySelectorAll(".card-desc__link"),
   cardRelatedSlider: document.querySelector(".card-related__slider"),
+  burger: document.querySelector(".burger"),
+  navClose: document.querySelector(".nav__close"),
+  nav: document.querySelector(".nav"),
 };

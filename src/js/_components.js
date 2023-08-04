@@ -8,3 +8,4 @@ import "./components/stepper.js";
 import "./components/card-slider.js";
 import "./components/card-bottom-tabs.js";
 import "./components/products.js";
+import "./components/burger.js";

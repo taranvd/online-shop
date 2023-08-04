@@ -2,7 +2,7 @@ import "./_vendor";
 import vars from "./_vars";
 import "./_functions";
 import "./_components";
-import "../products.json";
+import "../resources/products.json";
 import SimpleBar from "simplebar";
 
 if (document.querySelector(".card")) {

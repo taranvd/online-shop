@@ -26,6 +26,11 @@
     font-weight: 700;
     max-width: 550px;
     margin-bottom: 40px;
+
+    @include md {
+      max-width: 500px;
+      font-size: 50px;
+    }
   }
 
   &__desc {
@@ -39,6 +44,14 @@
     right: 0;
 
     max-height: 80%;
+
+    @include md {
+      width: 300px;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__content {
@@ -48,6 +61,23 @@
     align-items: flex-start;
     height: 100%;
     padding: 0 260px;
+
+    @include lg {
+      padding: 0 100px;
+    }
+
+    @include md {
+      padding: 0;
+    }
+  }
+
+  @include lg-max {
+    height: 700px;
+  }
+
+  @include md {
+    min-height: auto;
+    height: 600px;
   }
 }
 
@@ -62,8 +92,7 @@
 }
 
 //TODO Problem with margin
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 12px;
 }
 

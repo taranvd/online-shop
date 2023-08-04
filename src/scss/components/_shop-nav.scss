@@ -3,6 +3,10 @@
   align-items: center;
   column-gap: 25px;
 
+  @include xs {
+    column-gap: 15px;
+  }
+
   &__link {
     display: inline-block;
     width: 16px;

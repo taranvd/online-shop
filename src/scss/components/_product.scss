@@ -109,6 +109,23 @@
 
   &__item {
     flex-basis: calc(20% - 30px);
+
+    @include md {
+      row-gap: 50px;
+      column-gap: 60px;
+      flex-basis: 30%;
+    }
+
+    @include xs {
+      row-gap: 15px;
+      column-gap: 15px;
+      flex-basis: 45%;
+    }
+  }
+
+  @include xs {
+    column-gap: 15px;
+    row-gap: 15px;
   }
 }
 

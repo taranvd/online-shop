@@ -2,6 +2,22 @@
   &__list {
     display: flex;
     column-gap: 42px;
+
+    @include md {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__close {
+    display: none;
+
+    @include md {
+      display: block;
+      position: absolute;
+      top: 3%;
+      right: 10%;
+    }
   }
 
   &__link {
@@ -9,7 +25,23 @@
       &::before {
         width: 100%;
         transition: width 0.33s;
+
+        @include md {
+          opacity: 0;
+        }
       }
     }
+    @include md {
+      display: inline-block;
+      padding: 10px 10%;
+      width: 100%;
+      font-size: 19px;
+      border-bottom: 1px solid #bfbfbf;
+    }
+  }
+
+  &--visible {
+    left: 0;
+    transition: left 0.3s;
   }
 }

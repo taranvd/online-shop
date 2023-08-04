@@ -9,10 +9,18 @@
     justify-content: center;
 
     margin-bottom: 45px;
+
+    @include xs {
+      column-gap: 10px;
+    }
   }
 
   &__btn {
     font-size: 24px;
+
+    @include xs {
+      font-size: 15px;
+    }
 
     &--current {
       &::before {
